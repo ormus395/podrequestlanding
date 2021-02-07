@@ -47,6 +47,17 @@
   flex-direction: column;
 }
 
+.form__input {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+.form__input > * {
+  margin-bottom: 1rem;
+}
+
 .hero__form > * {
   margin-bottom: 1rem;
 }
@@ -90,8 +101,6 @@
   }
 
   .hero__form {
-    flex-direction: row;
-    position: relative;
     margin-bottom: 4.8rem;
     width: 70%;
     vertical-align: middle;

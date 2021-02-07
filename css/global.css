@@ -7,6 +7,7 @@
   --light-grey-blue: #c2cbe5;
   --light-black: #121725;
   --white: #fff;
+  --error: #fb3e3e;
 }
 
 *,
@@ -57,8 +58,13 @@ img {
   border: none;
   border-radius: 50px;
   color: var(--light-black);
+  cursor: pointer;
   font-weight: 700;
   padding: 1rem 0;
+}
+
+.btn:active {
+  background-color: #b3ffe2;
 }
 
 .container {
@@ -75,6 +81,11 @@ img {
 
 .input::placeholder {
   color: var(--light-grey-blue);
+}
+
+.error {
+  color: var(--error);
+  position: relative;
 }
 
 @media screen and (min-width: 768px) {
