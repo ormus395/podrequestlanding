@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700&display=swap");
+
+:root {
+  --light-green: #54e6af;
+  --grey-blue: #2c344b;
+  --grey-blue: #5a668a;
+  --light-grey-blue: #c2cbe5;
+  --light-black: #121725;
+  --white: #fff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../assets/mobile/image-host.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+
+  justify-content: center;
+  font-family: "Chivo", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+
+  line-height: 1.2;
+
+  height: 100vh;
+
+  position: relative;
+}
+
+body::before {
+  background-color: var(--light-black);
+
+  content: "";
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.9;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+h1 {
+  color: var(--light-green);
+  font-size: 2.888rem;
+}
+
+img {
+  width: 100%;
+}
+
+.btn {
+  background-color: var(--light-green);
+  border: none;
+  border-radius: 50px;
+  color: var(--light-black);
+  font-weight: 700;
+  padding: 1rem 0;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.input {
+  background-color: var(--grey-blue);
+  border: none;
+  border-radius: 50px;
+  padding: 1rem;
+}
+
+.input::placeholder {
+  color: var(--light-grey-blue);
+}
+
+@media screen and (min-width: 770px) {
+  body {
+    background-image: none;
+  }
+}

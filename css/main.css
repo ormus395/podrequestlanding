@@ -1,0 +1,63 @@
+.main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  max-width: 375px;
+  margin: 0 auto;
+  padding-top: 3.444rem;
+  text-align: center;
+}
+
+.logo {
+  background: url(../assets/desktop/logo.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 3.111rem;
+  width: 7.5rem;
+}
+
+.hero {
+  margin: 3.111rem 0;
+}
+
+.hero__header {
+  margin-bottom: 1.5rem;
+}
+
+.hero__text {
+  color: var(--light-grey-blue);
+  line-height: 1.5;
+  font-weight: 300;
+  margin-bottom: 2.2rem;
+}
+
+.hero__title--white {
+  color: var(--white);
+}
+
+.hero__footer {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.hero__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__form > * {
+  margin-bottom: 1rem;
+}
+
+.business__logos {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+
+.b__logo {
+  width: 20%;
+}
