@@ -33,19 +33,6 @@ body {
   position: relative;
 }
 
-body::before {
-  background-color: var(--light-black);
-
-  content: "";
-
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0.9;
-}
-
 h1,
 h2,
 h3,
@@ -90,8 +77,63 @@ img {
   color: var(--light-grey-blue);
 }
 
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 768px) {
   body {
+    background-color: var(--light-black);
     background-image: none;
+  }
+
+  body::before {
+    background-image: url(../assets/desktop/bg-pattern-dots.svg);
+    background-repeat: no-repeat;
+    content: "";
+    position: absolute;
+
+    bottom: 0;
+    left: 3rem;
+    height: 104px;
+    width: 232px;
+  }
+
+  body::after {
+    background-image: url(../assets/tablet/image-host.jpg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 65%;
+
+    z-index: -1;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body::before {
+    background-color: var(--light-black);
+
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.9;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  body::after {
+    background-image: url(../assets/desktop/image-host.jpg);
+    top: 70px;
+  }
+
+  body::before {
+    right: 0;
+    left: auto;
+    bottom: 18%;
   }
 }
