@@ -88,6 +88,10 @@ img {
   position: relative;
 }
 
+.success {
+  color: #54e6af;
+}
+
 @media screen and (min-width: 768px) {
   body {
     background-color: var(--light-black);
