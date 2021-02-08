@@ -1,6 +1,7 @@
 let form = document.querySelector(".hero__form");
+let isError = false;
 
-function validateEmail() {
+function validEmail() {
   if (
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
       form.email.value
@@ -8,17 +9,25 @@ function validateEmail() {
   ) {
     return true;
   }
-  alert("You have entered an invalid email address!");
   return false;
 }
 
-form.addEventListener("click", (e) => {
+form.addEventListener("submit", (e) => {
   e.preventDefault();
-  if (!validateEmail()) {
+  if (!validEmail()) {
     let error = document.createElement("p");
     error.innerText = "Oops! Please check your email";
     error.classList.add("error");
 
-    form.appendChild(error);
+    if (!isError) {
+      isError = true;
+      form.appendChild(error);
+    }
+  } else {
+    let error = document.querySelector(".error");
+
+    if (error) {
+      error.remove();
+    }
   }
 });
